@@ -9,6 +9,23 @@ Pipes:
     this will make the field `name` of the `hero` variable
      uppercase in browser
 
+Class binding:
+    https://angular.io/guide/attribute-binding#class-binding
+
+    [class.____]='some conditional'
 
 app.module.ts holds some metadata information regarding other libraries
 Angular may need, like the `FormsModule` to use the @NgModule decorator
+
+*ngFor='let ____ of __varArray__'
+    ex:
+        <li *ngFor='let hero of heroes'>
+            <span class='badge'>{{hero.id}}</span> {{hero.name}}
+        </li>
+
+*ngIf='___'
+    ex:
+        <div *ngIf='selectedHero'>
+            ...
+        </div>
+    only display the div if the component's `selectedHero` variable is defined
