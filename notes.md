@@ -17,8 +17,7 @@ this will make the field `name` of the `hero` variable uppercase in browser
 <li [class.____]='some conditional'></li>
 ```
 
-# Etc.
-- app.module.ts holds some metadata information regarding other libraries Angular may need, like the `FormsModule` to use the @NgModule decorator
+<br/>
 
 # [Directives:](https://angular.io/guide/built-in-directives#built-in-directives)
 
@@ -36,3 +35,8 @@ this will make the field `name` of the `hero` variable uppercase in browser
 </div>
 ```
 this only displays the div if the component's `selectedHero` variable is defined
+
+<br/>
+
+# Etc.
+- app.module.ts holds some metadata information regarding other libraries Angular may need, like the `FormsModule` to use the @NgModule decorator
