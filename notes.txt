@@ -1,0 +1,14 @@
+Pipes:
+    https://angular.io/guide/pipes
+
+    Use pipes to transform strings, currency amounts, dates, and 
+    other data for display. 
+
+    ex:
+        <h2>{{hero.name | uppercase}}</h2>
+    this will make the field `name` of the `hero` variable
+     uppercase in browser
+
+
+app.module.ts holds some metadata information regarding other libraries
+Angular may need, like the `FormsModule` to use the @NgModule decorator
