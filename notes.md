@@ -1,3 +1,14 @@
+# [Property binding:](https://angular.io/guide/property-binding)
+
+Like props in react ex:
+
+```html
+<app-hero-detail [hero]='selectedHero'></app-hero-detail>
+```
+Above details passing a value for the variable `hero` for the `hero-detail` component
+
+<br/>
+
 # [Pipes:](https://angular.io/guide/pipes)
 
 Use pipes to transform strings, currency amounts, dates and other data for display. 
