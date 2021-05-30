@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-import { HEROES } from '../mock-heroes';
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -9,15 +9,26 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesComponent implements OnInit {
 
-  heroes = HEROES;
-  
+  heroes: Hero[] = [];
+  getHeroes(): void {
+    /*
+    use a service to get 'heroes', gets called in ngOnInit() below
+    
+    using RxJS 'subscribe' to the service, basically async/await for data, 
+    doesn't make a difference now bc it's mock data
+    */
+    this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes)
+  }
+
   selectedHero?: Hero;
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
 
-  constructor() { }
+  constructor(private heroService: HeroService) { }
 
   ngOnInit(): void {
+    this.getHeroes(); //call heroes service
   }
 }
