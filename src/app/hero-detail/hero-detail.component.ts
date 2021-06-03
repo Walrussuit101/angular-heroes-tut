@@ -34,4 +34,11 @@ export class HeroDetailComponent implements OnInit {
     this.location.back();
   }
 
+  //on successful saving, just call goBack() to see the changes
+  save(): void{
+    if(this.hero){
+      this.heroService.updateHero(this.hero)
+        .subscribe(() => this.goBack());
+    }
+  }
 }
